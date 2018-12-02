@@ -3,20 +3,20 @@
 
 # Aim of project :
   - This project is a some sort of practice on the 12 factor app concept 
-        - Our project complies by the following factors:
-               - 0. README : In this repository you can see this written which clarifies how to use our project and modify it locally 
-               - 1. I Codebase : Our private git repository was constantly updated with any code contribution to the project
-               - 2. II Dependencies :
-                    - A dependency declaration manifest declares all dependencies of an app.In node js it is npm
-                    - A dependancy isolation tool is basically tool that ensures that no implicit dependencies “leak in” from the surrounding system , to avoid conlicts between version in the future . In node js it is npm.
-               - 3. III Config : A separate Config file should be created when running the project to avoid hard-coding it you can find below in the READ.md how to create it & its content
-               - 4. V Build, Run, Release : Our project contains a Dockerfile run off the application 
-                   Explaining the Dockerfile content: 
+  - Our project complies by the following factors:
+  - 0. README : In this repository you can see this written which clarifies how to use our project and modify it locally 
+  - 1. I Codebase : Our private git repository was constantly updated with any code contribution to the project
+  - 2. II Dependencies :
+  - A dependency declaration manifest declares all dependencies of an app.In node js it is npm
+  - A dependancy isolation tool is basically tool that ensures that no implicit dependencies “leak in” from the surrounding system , to avoid conlicts between version in the future . In node js it is npm.
+  - 3. III Config : A separate Config file should be created when running the project to avoid hard-coding it you can find below in the READ.md how to create it & its content
+  - 4. V Build, Run, Release : Our project contains a Dockerfile run off the application 
+    Explaining the Dockerfile content: 
                      ![alt text](https://i.ibb.co/0ch8fDN/Slide1.jpg)
-                 - 5. IV Backing Services : 2 backing services are used 
-                        1 - Mongodb
-                        2 - JSON API
-                     You can find in our project's directory a docker-compose.yml file that is used to bring up our app along with the backing services stated above docker-compose.yml content explained :
+  - 5. IV Backing Services : 2 backing services are used 
+    1 - Mongodb
+    2 - JSON API
+  - You can find in our project's directory a docker-compose.yml file that is used to bring up our app along with the backing services stated above docker-compose.yml content explained :
                ![alt text](https://i.ibb.co/XsFwRr4/Slide2.jpg)
                 
 # Prerequisites :
