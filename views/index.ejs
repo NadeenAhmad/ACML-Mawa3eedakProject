@@ -1,85 +1,4 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<body background="http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1920x1234.jpg">
-
-
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-
-<style>
-
-.button {
-
-  display: inline-block;
-
-  border-radius: 4px;
-
-  background-color: #4682b4;
-
-  border: none;
-
-  color: #FFFFFF;
-
-  text-align: center;
-
-  font-size: 15px;
-
-  padding: 10px;
-
-  width: 150px;
-
-  transition: all 0.5s;
-
-  cursor: pointer;
-
-  margin: 5px;
-
-}
-
-
-
-.button span {
-
-  cursor: pointer;
-
-  display: inline-block;
-
-  position: relative;
-
-  transition: 0.5s;
-
-}
-
-
-
-.button span:after {
-
-  content: '\00bb';
-
-  position: absolute;
-
-  opacity: 0;
-
-  top: 0;
-
-  right: -20px;
-
-  transition: 0.5s;
-
-}
-
-
-<!DOCTYPE html>
 <html lang="en">
 <body background="http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1920x1234.jpg">
 
@@ -168,7 +87,7 @@ border-color:#287EC7;
                    <div class="form-group">
  <input type="password" class="cos-xs-3"align="center" id="password" placeholder="Password" >
                 </div>
-                <button type="button" class="btn btn-primary center-block" onclick="auth()">Login</button>
+                <button type="button" class="btn btn-primary center-block" onclick="auth2()">Login</button>
             </form>
             <div id="token-display">
             </div>
@@ -210,145 +129,50 @@ border-color:#287EC7;
 	<p style="color:blue;">
                         mawa3eedak@gmail.com<font> </p></p>
 	  </div>
- 
+        <script type="text/javascript">
 
-
-
-
-
-
-
-
-
-
-</html>
-.button:hover span {
-
-  padding-right: 25px;
+function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
+auth2 = function (){
+var users;
+loadJSON('https://api.myjson.com/bins/ujpdu',
+         function(data) {// console.log(data);
+ users = data.users ;
+//console.log(users[0].name);
+//console.log(users[0].password);
+var i;
+var exists = 0;
+for( i=0 ; i< users.length;i++)
+if (users[i].name == document.getElementById("username").value
+&& users[i].password == document.getElementById("password").value)
+{ exists= 1;
 
 }
 
-
-
-.button:hover span:after {
-
-  opacity: 1;
-
-  right: 0;
-
-}
-
-
-
-.borderexample
-
-{ color : #FFFFFF;
-
-  padding: 10px;
-
-  width: 230px;
-
-border-style:solid;
-
-background-color: #4682b4;
-
-border-color:#287EC7;
-
-}
-
-
-
-</style>
-
-
-
-        <!-- Latest compiled and minified CSS -->
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-
-        
-
-        <!-- Latest compiled and minified JavaScript -->
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <title>Mawa3eedak</title>
-
-</head>
-
-<img src="http://www.cairogossip.com/wp-content/uploads/2012/10/GUCLogo.png" alt="GUC Logo"  align="right" width="250" height="100">
-
-
-
-<body>
-
-<div align="center">
-
-<font size="50">   <p style="color:white;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mawa3eedak</p> </font> 
-
-
-
-
-
- <div class="container">
-
-            <form>
-
-                 
-
-                <label for="username" style="color:white;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Username</label>
-
-                <div class="form-group">
-
-<input type="text" class="cos-xs-3" align="center" id="username" placeholder="Username" >
-
-                </div>
-
-                <br />
-
-                 <label for="password" style="color:white;" >Password</label>
-
-                   <div class="form-group">
-
- <input type="password" class="cos-xs-3"align="center" id="password" placeholder="Password" >
-
-                </div>
-
-                <button type="button" class="btn btn-primary center-block" onclick="auth2()">Login</button>
-
-            </form>
-
-            <div id="token-display">
-
-            </div>
-
-        </div>
-
-<br />
-
-<br />
-</body>
-</body>
-
-
- <script type="text/javascript">
-
-            auth= function(){
-              data={name:document.getElementById     ("username").value,password:document.getElementById("password").value}
-if((data.name == "nadeen" ||data.name == "mayar" || data.name == "radwa") && data.password =="1234"){
+if (exists == 1){
         document.getElementById('tasks').style.display = "block";
          document.getElementById('list').style.display = "block";
          document.getElementById('list2').style.display = "block";
          document.getElementById('list3').style.display = "block";
          document.getElementById('list4').style.display = "block";
          document.getElementById('fail').style.display = "none";
- 
-
-}
+ }
 else {
  document.getElementById('fail').style.display = "block";
 
@@ -357,7 +181,25 @@ else {
          document.getElementById('list2').style.display = "none";
          document.getElementById('list3').style.display = "none";
          document.getElementById('list4').style.display = "none";
+
+
+
 }
-}
+
+
+
+
+
+
+ },
+         function(xhr) { console.error(xhr); }
+);
+
+
+
+ 
+  }
+
+
         </script>
 </html>
