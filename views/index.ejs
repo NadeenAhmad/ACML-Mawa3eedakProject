@@ -168,7 +168,7 @@ border-color:#287EC7;
                    <div class="form-group">
  <input type="password" class="cos-xs-3"align="center" id="password" placeholder="Password" >
                 </div>
-                <button type="button" class="btn btn-primary center-block" onclick="auth2()">Login</button>
+                <button type="button" class="btn btn-primary center-block" onclick="auth()">Login</button>
             </form>
             <div id="token-display">
             </div>
@@ -333,4 +333,31 @@ border-color:#287EC7;
 <br />
 </body>
 </body>
+
+
+ <script type="text/javascript">
+
+            auth= function(){
+              data={name:document.getElementById     ("username").value,password:document.getElementById("password").value}
+if((data.name == "nadeen" ||data.name == "mayar" || data.name == "radwa") && data.password =="1234"){
+        document.getElementById('tasks').style.display = "block";
+         document.getElementById('list').style.display = "block";
+         document.getElementById('list2').style.display = "block";
+         document.getElementById('list3').style.display = "block";
+         document.getElementById('list4').style.display = "block";
+         document.getElementById('fail').style.display = "none";
+ 
+
+}
+else {
+ document.getElementById('fail').style.display = "block";
+
+         document.getElementById('tasks').style.display = "none";
+         document.getElementById('list').style.display = "none";
+         document.getElementById('list2').style.display = "none";
+         document.getElementById('list3').style.display = "none";
+         document.getElementById('list4').style.display = "none";
+}
+}
+        </script>
 </html>
