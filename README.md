@@ -21,10 +21,10 @@
                 
 # Prerequisites :
   - In order to run this project you only need Docker installed !!
-       You can find below some links that helps in the installation process: 
-             - Linux Ubuntu 16.04: "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04"
-             - Windows 10 Pro : "https://docs.docker.com/docker-for-windows/install/"
-             - Mac : "https://docs.docker.com/docker-for-mac/" 
+  - You can find below some links that helps in the installation process: 
+  - Linux Ubuntu 16.04: "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04"
+  - Windows 10 Pro : "https://docs.docker.com/docker-for-windows/install/"
+  - Mac : "https://docs.docker.com/docker-for-mac/" 
 # Built with :
 * Mean stack :
     - Mongodb
