@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<body background="http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1920x1234.jpg">
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
+  <script>bubbly({
 
+
+                colorStart: "#111",
+                colorStop: "#422",
+                bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`});</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <style>
+
+
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #4682b4;
+  background-color: #FFB6C1;
   border: none;
-  color: #FFFFFF;
+  color: #000;
   text-align: center;
   font-size: 15px;
   padding: 10px;
@@ -49,12 +57,53 @@
 }
 
 .borderexample
-{ color : #FFFFFF;
+{ color : #000;
   padding: 10px;
   width: 230px;
 border-style:solid;
-background-color: #4682b4;
-border-color:#287EC7;
+background-color: #FFB6C1;
+border-color:	#DB7093;
+}
+
+.knockout {
+	
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size:50pt;
+	color: blue;
+	color: #fff;
+	background:#fff;
+	background-size: 200%;
+	 -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.knockout2 {
+	
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size:20pt;
+	color: blue;
+	color: #fff;
+	background:#fff;
+	background-size: 200%;
+	 -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.knockout3 {
+	
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size:15pt;
+	color: blue;
+	color: #fff;
+	background:#fff;
+	background-size: 200%;
+	 -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 </style>
@@ -66,28 +115,38 @@ border-color:#287EC7;
         
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <title>Mawa3eedak</title>
-</head>
-<img src="http://www.cairogossip.com/wp-content/uploads/2012/10/GUCLogo.png" alt="GUC Logo"  align="right" width="250" height="100">
 
+
+
+<title>Mawa3eedak</title>
+
+</head>
 <body>
 <div align="center">
-<font size="50">   <p style="color:white;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mawa3eedak</p> </font> 
-
-
  <div class="container">
+
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<div class="main">
+	<div class = "border">
+			<p class="knockout">Mawa3eedak    <img src="https://www.picpng.com/images/large/checklist-icon-notes-hd-png-44991" alt="checklist icon"  align="float:left;" width="100" height="125">
+</p>
+
+	</div>
+
+</div>
             <form>
                  
-                <label for="username" style="color:white;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Username</label>
+                <label for="username" style="color:white;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<h1 class="knockout2">Username </h1> </label>
                 <div class="form-group">
 <input type="text" class="cos-xs-3" align="center" id="username" placeholder="Username" >
                 </div>
                 <br />
-                 <label for="password" style="color:white;" >Password</label>
+                 <label for="password" style="color:white;" >
+<h1 class="knockout2">Password </h1> </label>
                    <div class="form-group">
  <input type="password" class="cos-xs-3"align="center" id="password" placeholder="Password" >
                 </div>
-                <button type="button" class="btn btn-primary center-block" onclick="auth2()">Login</button>
+                <button type="button" class="button" onclick="auth()">Login</button>
             </form>
             <div id="token-display">
             </div>
@@ -98,11 +157,11 @@ border-color:#287EC7;
 <p id ="fail" class="borderexample"   style="display:none;" style="color:white;">Wrong username/password</p>
 
 
-<p id ="tasks" class="borderexample"   style="display:none;" style="color:white;">You have <%= items.length %> task(s) to do</p>
+<p id ="tasks" class="borderexample"   style="display:none;" >You have <%= items.length %> task(s) to do</p>
  <p id="list" style="display:none;">
     <% items.forEach(function(item) { %>
-      <label>
-  <%= item.name %>
+      <label style="color:lightpink;">
+ <%= item.name %> 
       </label>
         <br />
       <% }); %>
@@ -124,10 +183,10 @@ border-color:#287EC7;
 </body>
 </body>
 <div align ="center">
-		<p> <font size="3"> Inspired by you ! </font></p>
-		<p> <font size="3">Contact information: 
-	<p style="color:blue;">
-                        mawa3eedak@gmail.com<font> </p></p>
+		<p class="knockout3">  Inspired by you !</p>
+		<p class="knockout3">Contact information: </p>
+	<p style="color:lightpink;">
+                        mawa3eedak@gmail.com </p>
 	  </div>
         <script type="text/javascript">
 
@@ -149,7 +208,7 @@ function loadJSON(path, success, error)
     xhr.open("GET", path, true);
     xhr.send();
 }
-auth2 = function (){
+auth = function (){
 var users;
 loadJSON('https://api.myjson.com/bins/ujpdu',
          function(data) {// console.log(data);
@@ -200,6 +259,6 @@ else {
  
   }
 
-
         </script>
+
 </html>
